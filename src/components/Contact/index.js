@@ -50,7 +50,7 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        I am interested in freelance opportunities - especially ambitious or
+                        I am interested in web development opportunities - especially ambitious or
                         large projects. However, if you have other request or question,
                         don't hesitate to contact me using below form either.
                     </p>
@@ -100,14 +100,15 @@ const Contact = () => {
                     <span>cbngong@gmail.com</span>
                 </div>
                 <div className="map-wrap">
-                    <MapContainer center={cityPosition} zoom={13}>
+                    <MapContainer center={cityPosition} zoom={6}>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         <Marker position={cityPosition}>
                             <Popup>
-                                This is where I live
+                                This is the city <br />
+                                I live in
                             </Popup>
                         </Marker>
                     </MapContainer>
