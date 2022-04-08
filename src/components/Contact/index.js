@@ -9,6 +9,7 @@ import './index.scss'
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const form = useRef()
+    const cityPosition = [43.529742, 5.447427]
 
     useEffect(() => {
         return setTimeout(() => {
@@ -90,20 +91,24 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="info-map">
-                    Slobodan Gajić,
+                    Cyrille Bomba
                     <br />
-                    Serbia,
+                    Aix-en-Provence,13100
                     <br />
-                    Branka RadiČevića 19, 22000 <br />
-                    Sremska Mitrovica <br />
+                    France
                     <br />
-                    <span>freelancerslobodan@gmail.com</span>
+                    <span>cbngong@gmail.com</span>
                 </div>
                 <div className="map-wrap">
-                    <MapContainer center={[44.96366, 19.61045]} zoom={13}>
-                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={[44.96366, 19.61045]}>
-                            <Popup>Sloba lives here, come over for a cup of coffee :)</Popup>
+                    <MapContainer center={cityPosition} zoom={13}>
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={cityPosition}>
+                            <Popup>
+                                This is where I live
+                            </Popup>
                         </Marker>
                     </MapContainer>
                 </div>
